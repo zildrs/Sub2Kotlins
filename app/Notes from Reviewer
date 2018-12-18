@@ -1,0 +1,42 @@
+Notes:
+
+Selalu gunakan versi terbaru dari Kotlin Plugin agar kode yang Anda tuliskan sesuai dengan best practice yang disarankan. Saat ini versi terbaru dari Kotlin Plugin adalah 1.3.11. Silahkan update pada file build.gradle level root atau project.
+
+Selalu gunakan target Android SDK terbaru. Saat ini versi terbaru dari Android SDK adalah 28.
+Biasakan untuk reformat code dan optimized import supaya code lebih rapi dan bersih dari unused import.
+
+Windows :
+
+Ctrl + Alt + L
+
+Ctrl + Alt + O
+
+Linux:
+
+Ctrl + Shift + Alt + L
+
+Ctrl + Shift + Alt + O
+
+Mac:
+
+Option + Command + L
+
+Option + Command + O
+
+
+Hapuslah resource yang tidak pernah digunakan. Anda bisa menggunakan menu  Refactor - Remove Unused Resources.
+
+Hindari penggunaan hardcoded text string. Silahkan pindahkan string value ke file strings.xml.
+
+Child dari ScrollView sebaiknya menggunakan wrap_content untuk attribute layout_height.
+
+penulisan nama fungsi sebaiknya menggunakan format camelCase.
+penulisan nama variabel/parameter/property sebaiknya menggunakan format camelCase.
+Fungsi dan variable   yang hanya diakses dari dalam sebuah class atau file, sebaiknya dijadikan private .
+Hindari penggunaan double bang operator (!!) saat mengakses nullable type, karena akan memaksa suatu variable menjadi non-null. Dan jika ternyata variable tersebut bernilai null, maka bisa menyebabkan NPE. Pelajari kembali tentang fitur  Null Safety.  Periksa kembali semua kode Anda dan jangan biarkan satupun operator tersebut tersisa. Anda bisa menggantinya dengan safe calls.
+pada kelas DetailActivity, fungsi setup() dapat Anda pecah menjadi fungsi-fungsi kecil untuk menghindari kode fungsi yang terlalu panjang dan bersarang terlalu dalam.
+Sebaiknya pisahkan logika bisnis dari activity/fragment. Anda dapat mempelajari ulang contoh pemisahan tersebut pada modul menerapkan logika bisnis.
+Pada kelas DetailActivity, pengecekan berikut:
+if (it.strAwayLineupDefense == null)
+ akan selalu benar karena tipe datanya tidak mengijinkan nilai null (non-null variable)
+Untuk memasang listener pada viewholder sebaiknya dilakukan di onCreateViewHolder, sesuai dengan best practice dari developer recyclerviewhttps://www.youtube.com/watch?v=KhLVD6iiZQs&t=2s
