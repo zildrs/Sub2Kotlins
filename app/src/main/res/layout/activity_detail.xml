@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".main.DetailActivity">
+
+    <TextView
+        android:id="@+id/txtDateDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="@string/date" />
+
+    <TextView
+        android:id="@+id/txtTimeDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="17.00"
+        android:textColor="@color/color4"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <LinearLayout
+
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:id="@+id/txtNameHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@color/color4"
+                    android:id="@+id/imgHomeDetail"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="18sp"
+                    android:paddingTop="8dp"
+                    android:text="Chelsea"
+                    android:textColor="@color/color4"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/txtHomeDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="4"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/txtNameHome"
+                android:layout_toLeftOf="@id/txtvsdet"
+                android:layout_centerVertical="true"
+                android:id="@+id/txtDetailScoreHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="4"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/txtvsdet"
+                android:layout_toLeftOf="@id/txtAwayName"
+                android:layout_centerVertical="true"
+                android:id="@+id/txtDetailScoreAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/txtvsdet"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="25sp"
+                    android:text="vs"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:id="@+id/txtAwayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgDetailAway"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@color/color4" />
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:id="@+id/txtDetailAway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/color4"
+                    android:textSize="19sp"
+                    tools:text="Chelsea" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/txtGoal"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bola" />
+
+        <TextView
+            android:id="@+id/txtDetailHomeGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/txtGoal"
+            tools:text="Raul de Tomas 6'\nGael Kakuta 48'" />
+
+        <TextView
+            android:id="@+id/txtDetailAwayGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtGoal"
+            android:gravity="right"
+            tools:text="Raul de Tomas 6'\nGael Kakuta 48'\nLoren Moron 64'" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+
+        <ImageView
+            android:id="@+id/txtYellowCard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/yellowcard" />
+
+        <TextView
+            android:id="@+id/txtDetailYellowHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/txtYellowCard"
+            tools:text="Pedro Alcala 73'\nEsteban Granero 79'" />
+
+        <TextView
+            android:id="@+id/txtDetailYellowAway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtYellowCard"
+            android:gravity="right"
+            tools:text="Marc Roca 83'" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+
+        <ImageView
+            android:id="@+id/txtRedCard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/redcard" />
+
+        <TextView
+            android:id="@+id/txtDetailRedHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/txtRedCard"
+            tools:text="Pedro Alcala 73'\nEsteban Granero 79'" />
+
+        <TextView
+            android:id="@+id/txtDetailRedAway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtRedCard"
+            android:gravity="right"
+            tools:text="Marc Roca 83'" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/btnLineup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="L i n e u p s"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="23sp" />
+
+</LinearLayout>
